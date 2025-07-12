@@ -9,11 +9,24 @@ module.exports = {
       '@semantic-release/commit-analyzer',
       {
         releaseRules: [
-          { type: 'chore', release: 'patch' },  // <-- Added this line
+          { type: 'chore', release: 'patch' }, // your custom rule
         ],
       },
     ],
-    '@semantic-release/release-notes-generator',
+    [
+      '@semantic-release/release-notes-generator',
+      {
+        preset: 'conventionalcommits',
+        presetConfig: {
+          types: [
+            { type: 'feat', section: 'Features' },
+            { type: 'fix', section: 'Bug Fixes' },
+            { type: 'chore', section: 'Chores' },
+            { type: null, section: 'Other Changes' }, // fallback catch-all to avoid invalid date error
+          ],
+        },
+      },
+    ],
     '@semantic-release/changelog',
     [
       '@semantic-release/git',

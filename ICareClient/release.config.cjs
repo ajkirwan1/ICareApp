@@ -13,7 +13,20 @@ module.exports = {
         ],
       },
     ],
-    '@semantic-release/release-notes-generator',
+    [
+      '@semantic-release/release-notes-generator',
+      {
+        preset: 'conventionalcommits',
+        presetConfig: {
+          types: [
+            { type: 'feat', section: 'Features' },
+            { type: 'fix', section: 'Bug Fixes' },
+            { type: 'chore', section: 'Chores' },
+            // add more types if you want
+          ],
+        },
+      },
+    ],
     '@semantic-release/changelog',
     [
       '@semantic-release/git',

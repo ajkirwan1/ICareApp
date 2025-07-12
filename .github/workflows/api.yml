@@ -1,0 +1,24 @@
+name: API CI
+
+on:
+  push:
+    paths:
+      - 'ICareAPI/**'
+  pull_request:
+    paths:
+      - 'ICareAPI/**'
+
+jobs:
+  api:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ICareAPI/ICareAPI
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.0.x'
+      - run: dotnet restore
+      - run: dotnet build --no-restore
+      - run: dotnet test

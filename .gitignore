@@ -1,0 +1,59 @@
+# -------------------
+# Node.js
+# -------------------
+node_modules/
+dist/
+build/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.env
+.env.*.local
+
+# Package manager locks (keep if you want deterministic builds)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# -------------------
+# .NET / C#
+# -------------------
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.vcxproj.user
+*.csproj.user
+
+# ASP.NET sensitive files
+appsettings.Development.json
+appsettings.Local.json
+secrets.json
+
+# Entity Framework
+Migrations/
+
+# Rider / VS Code
+.idea/
+.vscode/
+
+# -------------------
+# OS generated
+# -------------------
+.DS_Store
+Thumbs.db
+
+# -------------------
+# Logs
+# -------------------
+*.log
+
+# -------------------
+# Coverage / Testing
+# -------------------
+coverage/
+*.lcov
+TestResults/
+*.trx

@@ -1,0 +1,30 @@
+name: Client CI
+
+on:
+  push:
+    paths:
+      - 'ICareClient/**'
+  pull_request:
+    paths:
+      - 'ICareClient/**'
+
+jobs:
+  client-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # Install deps in root
+      - name: Install dependencies in root
+        run: npm ci
+
+      # Run lint & test inside ICareClient folder
+      - name: Run lint and tests in ICareClient
+        working-directory: ICareClient
+        run: |
+          npm run lint
+          npm test

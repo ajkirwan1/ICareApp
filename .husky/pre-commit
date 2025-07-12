@@ -1,0 +1,2 @@
+cd IcareClient || exit 1
+npm run lint:all

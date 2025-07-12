@@ -1,3 +1,10 @@
+# [1.0.0-dev.8](https://github.com/ajkirwan1/ICareApp/compare/v1.0.0-dev.7...v1.0.0-dev.8) (2025-07-12)
+
+
+### Features
+
+* test majo ([0131c6e](https://github.com/ajkirwan1/ICareApp/commit/0131c6e3d9ff46e41b252f83712bc867dad59605))
+
 # [1.0.0-dev.7](https://github.com/ajkirwan1/ICareApp/compare/v1.0.0-dev.6...v1.0.0-dev.7) (2025-07-12)
 
 

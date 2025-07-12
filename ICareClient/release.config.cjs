@@ -15,7 +15,12 @@ module.exports = {
     ],
     '@semantic-release/release-notes-generator',
     '@semantic-release/changelog',
-    '@semantic-release/npm', // Updates version in package.json
+    [
+      '@semantic-release/npm',
+      {
+        npmPublish: false, // Only bump version in package.json, don’t publish
+      },
+    ],
     [
       '@semantic-release/git',
       {
@@ -25,4 +30,4 @@ module.exports = {
     ],
     '@semantic-release/github',
   ],
-}
+};

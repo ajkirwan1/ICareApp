@@ -9,20 +9,13 @@ module.exports = {
       '@semantic-release/commit-analyzer',
       {
         releaseRules: [
-          { type: 'chore', release: 'patch' },  // <-- Added this line
+          { type: 'chore', release: 'patch' },
         ],
       },
     ],
     '@semantic-release/release-notes-generator',
     '@semantic-release/changelog',
-    [
-      '@semantic-release/git',
-      {
-        assets: ['CHANGELOG.md', 'package.json'],
-        message: 'chore(release): ${nextRelease.version} [skip ci]',
-      },
-    ],
-    '@semantic-release/npm',  // <--- this updates package.json version
+    '@semantic-release/npm', // Updates version in package.json
     [
       '@semantic-release/git',
       {
